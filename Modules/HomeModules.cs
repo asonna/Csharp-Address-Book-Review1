@@ -11,16 +11,22 @@ namespace AddressBook
       Get["/add_address"] = _ => {
         return View["add_address.cshtml"];
       };
+
       Post["/address_added"] = _ => {
         string inputName = Request.Form["new-full-name"];
         string inputHomeAddress = Request.Form["new-home-address"];
         string inputNumber = Request.Form["new-phone-number"];
 
         Address inputAddress = new Address(inputName, inputHomeAddress, inputNumber);
-        inputAddress.AddToAddressList();
+        inputAddress.AddToAddressBook();
 
         return View["address_added.cshtml", inputAddress];
       };
+
+      Get["/address_book"] = _ => {
+        return View["address_book.cshtml", Address.ViewAddressBook()];
+      };
+
     }
   }
 }

@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>My Address Book</h1><br>
+  <p>Here are all the addresses in our book:</p>
+  @foreach(var addressInstance in Model)
+  {
+    <br>
+    <p><strong>@addressInstance.GetFullName()</strong></p>
+    <p>HomeAddress: @addressInstance.GetHomeAddress()</p>
+    <p>PhoneNumber: @addressInstance.GetPhoneNumber()</p>
+  }
+
+  <p><a href="/add_address">Add a New Address</a></p>
+  <form action="/cleared_book" method="post">
+    <button type="submit">Clear Address Book</button>
+  </form>
+</div>

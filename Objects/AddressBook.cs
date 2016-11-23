@@ -8,7 +8,7 @@ namespace AddressBook.Objects
     private string _homeAddress;
     private string _phoneNumber;
 
-    private static List<Address> _addressList = new List<Address> {};
+    private static List<Address> _addressBook = new List<Address> {};
 
     public Address (string fullName, string homeAddress,string phoneNumber)
     {
@@ -43,17 +43,17 @@ namespace AddressBook.Objects
       return _phoneNumber;
     }
 
-    public void AddToAddressList()
+    public void AddToAddressBook()
     {
-      _addressList.Add(this);
+      _addressBook.Add(this);
     }
-    public static List<Address> ViewAddressList()
+    public static List<Address> ViewAddressBook()
     {
-      return _addressList;
+      return _addressBook;
     }
-    public static void ClearAddressList()
+    public static void ClearAddressBook()
     {
-      _addressList.Clear();
+      _addressBook.Clear();
     }
   }
 }
