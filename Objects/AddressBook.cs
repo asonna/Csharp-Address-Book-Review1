@@ -2,15 +2,15 @@ using System.Collections.Generic;
 
 namespace AddressBook.Objects
 {
-  public class Adress
+  public class Address
   {
     private string _fullName;
-    private string _homeAddress
-    private int _phoneNumber;
+    private string _homeAddress;
+    private string _phoneNumber;
 
     private static List<Address> _addressList = new List<Address> {};
 
-    public Address (string fullName, string homeAddress,int phoneNumber)
+    public Address (string fullName, string homeAddress,string phoneNumber)
     {
       _fullName = fullName;
       _homeAddress = homeAddress;
@@ -34,11 +34,11 @@ namespace AddressBook.Objects
     {
       return _homeAddress;
     }
-    public void SetPhoneNumber(int newPhoneNumber)
+    public void SetPhoneNumber(string newPhoneNumber)
     {
       _phoneNumber = newPhoneNumber;
     }
-    public int GetPhoneNumber()
+    public string GetPhoneNumber()
     {
       return _phoneNumber;
     }
