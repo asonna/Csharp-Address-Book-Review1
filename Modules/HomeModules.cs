@@ -27,6 +27,10 @@ namespace AddressBook
         return View["address_book.cshtml", Address.ViewAddressBook()];
       };
 
+      Post["/cleared_book"] = _ => {
+        Address.ClearAddressBook();
+        return View["/cleared_book.cshtml"];
+      };
     }
   }
 }
