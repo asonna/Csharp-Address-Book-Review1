@@ -31,6 +31,7 @@ namespace AddressBook
         Address.ClearAddressBook();
         return View["/cleared_book.cshtml"];
       };
+    
     }
   }
 }

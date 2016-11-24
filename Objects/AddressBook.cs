@@ -34,6 +34,7 @@ namespace AddressBook.Objects
     {
       return _homeAddress;
     }
+
     public void SetPhoneNumber(string newPhoneNumber)
     {
       _phoneNumber = newPhoneNumber;
@@ -47,13 +48,26 @@ namespace AddressBook.Objects
     {
       _addressBook.Add(this);
     }
+
     public static List<Address> ViewAddressBook()
     {
       return _addressBook;
     }
+
     public static void ClearAddressBook()
     {
       _addressBook.Clear();
     }
+
+    // public void RemoveFromAddressBook()
+    // {
+    //   _addressBook.Remove(this);
+    // }
+    //
+    // public void ViewSingleAddress()
+    // {
+    //   return this;
+    // }
+
   }
 }

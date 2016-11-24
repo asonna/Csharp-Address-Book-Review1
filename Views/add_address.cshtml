@@ -1,19 +1,29 @@
-<div class="container">
-  <h1>My Address Book</h1>
-  <p>Please enter your contact to my address book using the form below:</p>
-  <form action="/address_added" method="post">
-    <div class="form-group">
-      <label for="new-fullName">Fist & LastName: </label>
-      <input type="text" name="new-fullName" id="new-fullName" class="form-control">
-    </div><br>
-    <div class="form-group">
-      <label for="new-homeAddress">HomeAddress: </label>
-      <input type="text" name="new-homeAddress" id="new-homeAddress" class="form-control">
-    </div><br>
-    <div class="form-group">
-      <label for="new-phoneNumber">PhoneNumber: </label>
-      <input type="text" name="new-phoneNumber" id="new-phoneNumber" class="form-control">
-    </div><br>
-    <button type="submit" class="btn-primary">Submit</button>
-  </form>
-</div>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/Content/css/styles.css">
+		<title>Address Book</title>
+	</head>
+	<body>
+    <div class="container">
+      <h1>My Address Book</h1>
+      <p>Please enter your contact to my address book using the form below:</p>
+      <form action="/address_added" method="post">
+        <div class="form-group">
+          <label for="new-fullName">Fist & LastName: </label>
+          <input type="text" name="new-fullName" id="new-fullName" class="form-control">
+        </div><br>
+        <div class="form-group">
+          <label for="new-homeAddress">HomeAddress: </label>
+          <input type="text" name="new-homeAddress" id="new-homeAddress" class="form-control">
+        </div><br>
+        <div class="form-group">
+          <label for="new-phoneNumber">PhoneNumber: </label>
+          <input type="text" name="new-phoneNumber" id="new-phoneNumber" class="form-control">
+        </div><br>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
