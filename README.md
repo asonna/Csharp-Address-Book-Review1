@@ -33,7 +33,7 @@ O1. Output 1
 O2. Output 2
  -  Example Output on "address_book" page:
       All line item of addreesses instances entered by user displaying on the new page called address_book. Here we have two instances of addresses entered:
-       Annie Sonna
+       Annie Sonna [bolded]
        HomeAddress: Beaverton, Oregon
        PhoneNumber: 503-35232354
 
@@ -45,17 +45,23 @@ O3. Output 3
   - Example Output after clicking on "Clear Address Book" button:
       Car inventory has been cleared.
 
+O4. Output 4
+  - Example Output after clicking on hyperlinked name in address_book page and getting output displayed in selected_address page:
+      Annie Sonna
+      HomeAddress: Beaverton, Oregon
+      PhoneNumber: 503-35232354
+
 
 ##Setup/Installation requirements
 
 1. Clone this repository to desktop.
 2. Use powershell under window machine to navigate to the repository.
 3. Run "dnx kestel" command
-4. In your browser, navigate to http://localhost:5004/add_address
+4. In your browser, navigate to http://localhost:5004/
 5. Then you are ready to start recording your addresses.
 
 ## Known Bugs
- Application can take anything as phone number.
+ Application can take anything as phone number and also duplicated contacts.
 
 
 ## Technologies Used

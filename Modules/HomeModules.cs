@@ -7,7 +7,7 @@ namespace AddressBook
   {
     public HomeModule()
     {
-      Get["/add_address"] = _ => {
+      Get["/"] = _ => {
         return View["add_address.cshtml"];
       };
 
@@ -33,7 +33,7 @@ namespace AddressBook
 
       Get["/selected_address"] = _ => {
         string selectFullName = Request.Query["myname"];
-      
+
         return View["selected_address.cshtml",Address.ViewSelectedAddress(selectFullName)];
       };
 

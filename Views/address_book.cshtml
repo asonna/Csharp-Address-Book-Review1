@@ -8,7 +8,7 @@
 	<body>
     <div class="container">
       <h1>My Address Book</h1><br>
-      <p>Here are all the addresses in our book; you can click on the name to select a contact to remove:</p>
+      <p>Here are all the addresses in our book; you can click on the name to select a contact to view on a separate page:</p>
       @foreach(var addressInstance in Model)
       {
         <br>
@@ -18,13 +18,19 @@
 					</p>
 	        <p>HomeAddress: @addressInstance.GetHomeAddress()</p>
 	        <p>PhoneNumber: @addressInstance.GetPhoneNumber()</p>
+					<br><br>
       }
+			<div class="row">
+				<div class="col-sm-3">
+					<form action="/cleared_book" method="post">
+						<button type="submit">Clear Address Book</button>
+					</form>
+				</div>
+				<div class="col-sm-3">
+					<p><a href="/">Add a New Address</a></p><br>
+				</div>
+			</div>
 
-      <p><a href="/add_address">Add a New Address</a></p><br>
-
-      <form action="/cleared_book" method="post">
-        <button type="submit">Clear Address Book</button>
-      </form>
     </div>
   </body>
 </html>

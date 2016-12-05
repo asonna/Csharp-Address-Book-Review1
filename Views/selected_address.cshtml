@@ -7,30 +7,38 @@
 	</head>
 	<body>
     <div class="container">
-			<h1>My Address Book</h1><br>
-			<p>Here is your selected contact information:</p>
+			<div class="row">
+				<div class="col-md-12">
+					<h1>My Address Book</h1><br>
+					<p>Here is your selected contact information:</p>
 
-			 @foreach(var addressInstance in Model)
-			{
+					@foreach(var addressInstance in Model)
+					{
+						<p>
+							<strong>@addressInstance.GetFullName()</strong>
+						</p>
+						<p>
+							HomeAddress: @addressInstance.GetHomeAddress()
+						</p>
 
-				<p>
-				<strong>@addressInstance.GetFullName()</strong>
-				</p>
-				<p>
-					HomeAddress: @addressInstance.GetHomeAddress()
-				</p>
+						<p>
+							PhoneNumber: @addressInstance.GetPhoneNumber()
+						</p>
+					}
+				</div>
+			</div><br><br>
+			<div class="row">
+				<div class="col-md-4">
+					<p><a href="/">Add a New Address</a></p>
+				</div>
+				<div class="col-md-4">
+					<p><a href="/address_book">View All Addresses</a></p><br>
+				</div>
 
-				<p>
-					PhoneNumber: @addressInstance.GetPhoneNumber()
-				</p>
-
-
-			}
-
-			<p><a href="/add_address">Add a New Address</a></p>
-			<form action="/cleared_book" method="post">
-				<button type="submit">Clear Address Book</button>
-			</form>
+				<form action="/cleared_book" method="post">
+					<button type="submit">Clear Address Book</button>
+				</form>
+			</div>
 
     </div>
   </body>
