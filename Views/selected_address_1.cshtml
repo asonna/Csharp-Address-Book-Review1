@@ -8,20 +8,22 @@
 	<body>
     <div class="container">
       <h1>My Address Book</h1><br>
-      <p>Here are all the addresses in our book; you can click on the name to select a contact to remove:</p>
-      @foreach(var addressInstance in Model)
-      {
-        <br>
+      <p>Here is your selected contact information:</p>
+			@foreach(var addressInstance in Model) -->
+			{
+				<br>
+				if (@addressInstance.GetFullName())
+				{
 					<p>
+					<strong>@addressInstance.GetFullName()</strong></p>
+					<p>HomeAddress: @addressInstance.GetHomeAddress()</p>
+					break
+					<p>PhoneNumber: @addressInstance.GetPhoneNumber
+					break;
+				}
+			}
 
-						<a href="/selected_address/?myname=@addressInstance.GetFullName()"><strong>@addressInstance.GetFullName()</strong></a>
-					</p>
-	        <p>HomeAddress: @addressInstance.GetHomeAddress()</p>
-	        <p>PhoneNumber: @addressInstance.GetPhoneNumber()</p>
-      }
-
-      <p><a href="/add_address">Add a New Address</a></p><br>
-
+      <p><a href="/add_address">Add a New Address</a></p>
       <form action="/cleared_book" method="post">
         <button type="submit">Clear Address Book</button>
       </form>

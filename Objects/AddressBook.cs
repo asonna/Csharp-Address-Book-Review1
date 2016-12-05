@@ -9,6 +9,7 @@ namespace AddressBook.Objects
     private string _phoneNumber;
 
     private static List<Address> _addressBook = new List<Address> {};
+    // private static Array<Address> _selectedAddress = new Array<Address>[];
 
     public Address (string fullName, string homeAddress,string phoneNumber)
     {
@@ -59,15 +60,19 @@ namespace AddressBook.Objects
       _addressBook.Clear();
     }
 
-    // public void RemoveFromAddressBook()
-    // {
-    //   _addressBook.Remove(this);
-    // }
-    //
-    // public void ViewSingleAddress()
-    // {
-    //   return this;
-    // }
 
+    public static  List<Address> ViewSelectedAddress(string _fullname)
+    {
+       List<Address> selectedAddress =   new List<Address> {};
+      foreach (Address _addr in _addressBook)
+      {
+        if (_addr.GetFullName() == _fullname)
+        {
+          selectedAddress.Add(_addr);
+          break;
+        }
+      }
+        return selectedAddress;
+    }
   }
 }

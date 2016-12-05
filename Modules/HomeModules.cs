@@ -1,7 +1,6 @@
 using Nancy;
 using AddressBook.Objects;
 using System.Collections.Generic;
-
 namespace AddressBook
 {
   public class HomeModule : NancyModule
@@ -31,7 +30,13 @@ namespace AddressBook
         Address.ClearAddressBook();
         return View["/cleared_book.cshtml"];
       };
-    
+
+      Get["/selected_address"] = _ => {
+        string selectFullName = Request.Query["myname"];
+      
+        return View["selected_address.cshtml",Address.ViewSelectedAddress(selectFullName)];
+      };
+
     }
   }
 }
