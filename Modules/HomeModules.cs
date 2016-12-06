@@ -11,7 +11,7 @@ namespace AddressBook
         return View["add_address.cshtml"];
       };
 
-      Post["/address_added"] = _ => {
+      Post["/address/new"] = _ => {
         string inputName = Request.Form["new-full-name"];
         string inputHomeAddress = Request.Form["new-home-address"];
         string inputNumber = Request.Form["new-phone-number"];
@@ -22,16 +22,16 @@ namespace AddressBook
         return View["address_added.cshtml", inputAddress];
       };
 
-      Get["/address_book"] = _ => {
+      Get["/addresses"] = _ => {
         return View["address_book.cshtml", Address.ViewAddressBook()];
       };
 
-      Post["/cleared_book"] = _ => {
+      Post["/addresses/cleared"] = _ => {
         Address.ClearAddressBook();
         return View["/cleared_book.cshtml"];
       };
 
-      Get["/selected_address"] = _ => {
+      Get["/address/selected"] = _ => {
         string selectFullName = Request.Query["myname"];
 
         return View["selected_address.cshtml",Address.ViewSelectedAddress(selectFullName)];

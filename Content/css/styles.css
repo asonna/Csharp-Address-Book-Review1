@@ -8,14 +8,14 @@ a {
   font-size: 20px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: yellow;
-  color: maroon;
+  background-color: blue;
+  color: lightblue;
   padding: 5px;
 }
 
 a:hover {
-  color: lightblue;
-  background-color: blue;
+  color: maroon;
+  background-color: yellow;
   text-decoration: none;
 }
 

@@ -12,17 +12,16 @@
       @foreach(var addressInstance in Model)
       {
         <br>
-					<p>
-
-						<a href="/selected_address/?myname=@addressInstance.GetFullName()"><strong>@addressInstance.GetFullName()</strong></a>
-					</p>
-	        <p>HomeAddress: @addressInstance.GetHomeAddress()</p>
-	        <p>PhoneNumber: @addressInstance.GetPhoneNumber()</p>
-					<br><br>
+				<p>
+				<a href="/address/selected/?myname=@addressInstance.GetFullName()"><strong>@addressInstance.GetFullName()</strong></a>
+				</p>
+        <p>HomeAddress: @addressInstance.GetHomeAddress()</p>
+        <p>PhoneNumber: @addressInstance.GetPhoneNumber()</p>
+				<br><br>
       }
 			<div class="row">
 				<div class="col-sm-3">
-					<form action="/cleared_book" method="post">
+					<form action="/addresses/cleared" method="post">
 						<button type="submit">Clear Address Book</button>
 					</form>
 				</div>
